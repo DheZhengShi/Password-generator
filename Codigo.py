@@ -1,8 +1,9 @@
 import random
 
-#some input
+#input
 length = input("Insertar un número entero positivo: ")
-if not ValueError(length):
+
+try:
   length = int(length)
  #generator
   def create_password(pass_length):
@@ -13,7 +14,7 @@ if not ValueError(length):
     password += random.choice(typing)
    return print(password)
   create_password(length)
-else: 
-  print("Ese no es un número")
+except ValueError: 
+  print("No puedo usar ese número.")
 
-#Investigué un poco por mi cuenta para esto.
+#en vez de if se usabe try para que funcione
